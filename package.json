@@ -1,0 +1,21 @@
+{
+  "name": "mixcloud-integrator",
+  "version": "1.0.0",
+  "description": "An Angular plugin to show and play data from the mixcloud library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua Hackett",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-minify": "^1.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

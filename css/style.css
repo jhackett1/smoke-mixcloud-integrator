@@ -1,0 +1,330 @@
+li.ng-enter {
+  opacity: 0;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out; }
+
+li.ng-enter-stagger {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s; }
+
+li.ng-enter-active {
+  opacity: 1; }
+
+@-webkit-keyframes enterPlayer {
+  0% {
+    -webkit-transform: translate3d(0px, 20px, 0px);
+    transform: translate3d(0px, 20px, 0px);
+    opacity: 0; }
+  20% {
+    -webkit-transform: translate3d(0px, 20px, 0px);
+    transform: translate3d(0px, 20px, 0px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1; } }
+
+@keyframes enterPlayer {
+  0% {
+    -webkit-transform: translate3d(0px, 20px, 0px);
+    transform: translate3d(0px, 20px, 0px);
+    opacity: 0; }
+  20% {
+    -webkit-transform: translate3d(0px, 20px, 0px);
+    transform: translate3d(0px, 20px, 0px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1; } }
+
+#mixcloud-player.ng-hide-remove {
+  -webkit-animation: 0.2s enterPlayer ease-out;
+  animation: 0.2s enterPlayer ease-out; }
+
+#mixcloud-player.ng-hide-add {
+  -webkit-animation: 0.2s enterPlayer ease-out;
+  animation: 0.2s enterPlayer ease-out;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse; }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebas-neue.otf"); }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+section#mixcloud-integrator {
+  margin: 30px 10px; }
+  section#mixcloud-integrator p.no-js {
+    text-align: center;
+    font-size: 2em;
+    color: #dfdfdf; }
+  section#mixcloud-integrator * {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
+    font-smooth: always; }
+  section#mixcloud-integrator h1, section#mixcloud-integrator h2, section#mixcloud-integrator h3, section#mixcloud-integrator h4, section#mixcloud-integrator h5 {
+    font-family: "Bebas Neue", Oswald, sans-serif;
+    color: #505050;
+    font-weight: 400; }
+  section#mixcloud-integrator p {
+    font-family: "Open Sans Condensed", Helvetica, sans-serif;
+    color: #969696; }
+  section#mixcloud-integrator img.loader {
+    max-width: 200px;
+    margin: 20px auto;
+    display: block; }
+  section#mixcloud-integrator h3.page {
+    color: #969696;
+    font-size: 2em; }
+  @media screen and (min-width: 700px) {
+    section#mixcloud-integrator div.pagination a {
+      font-size: 1.4em; } }
+  section#mixcloud-integrator div.pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    section#mixcloud-integrator div.pagination a {
+      display: inline-block;
+      padding: 15px 20px;
+      color: #f6f6f6;
+      background-color: #A42739;
+      font-family: "Bebas Neue", Oswald, sans-serif;
+      border-radius: 40px;
+      margin: 20px 0px;
+      font-size: 1.2em;
+      cursor: pointer; }
+      section#mixcloud-integrator div.pagination a:hover {
+        -webkit-filter: brightness(1.1);
+        filter: brightness(1.1);
+        text-decoration: none; }
+  section#mixcloud-integrator section#mixcloud-player {
+    -webkit-box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0px;
+    bottom: -5px;
+    right: 0px;
+    z-index: 5;
+    width: 100%; }
+    section#mixcloud-integrator section#mixcloud-player iframe {
+      max-width: 700px;
+      pointer-events: all;
+      overflow: hidden;
+      border-radius: 2px;
+      -webkit-box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.3);
+      box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.3);
+      background-color: #fcfcfc; }
+    section#mixcloud-integrator section#mixcloud-player i.fa-close {
+      color: #f6f6f6;
+      position: absolute;
+      top: -45px;
+      left: 5px;
+      cursor: pointer;
+      font-size: 1.5em;
+      -webkit-transition: 0.1s;
+      transition: 0.1s;
+      pointer-events: all;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #BB2D42;
+      border-radius: 30px;
+      z-index: -1;
+      -webkit-box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.1);
+      box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.1); }
+      section#mixcloud-integrator section#mixcloud-player i.fa-close:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1); }
+  @media screen and (min-width: 700px) {
+    section#mixcloud-integrator section#mixcloud-player {
+      padding: 20px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      pointer-events: none; }
+      section#mixcloud-integrator section#mixcloud-player i.fa-close {
+        top: 10px;
+        left: 12px;
+        z-index: 1; } }
+  @media screen and (min-width: 1400px) {
+    section#mixcloud-integrator section#mixcloud-player {
+      padding: 35px; } }
+  section#mixcloud-integrator ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    section#mixcloud-integrator ul li {
+      width: calc(50% - 15px);
+      margin: 0px 30px 30px 0px;
+      cursor: pointer; }
+      section#mixcloud-integrator ul li:nth-of-type(2n) {
+        margin-right: 0px; }
+      section#mixcloud-integrator ul li:hover div.podcast-icon {
+        -webkit-filter: brightness(1.2);
+        filter: brightness(1.2); }
+        section#mixcloud-integrator ul li:hover div.podcast-icon i.fa-play {
+          opacity: 1; }
+      section#mixcloud-integrator ul li:active div.podcast-icon i.fa-play {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0 !important;
+        -webkit-transition: 1s;
+        transition: 1s; }
+      section#mixcloud-integrator ul li.playing {
+        cursor: default; }
+        section#mixcloud-integrator ul li.playing div.podcast-icon {
+          -webkit-filter: brightness(1.2);
+          filter: brightness(1.2); }
+          section#mixcloud-integrator ul li.playing div.podcast-icon i.fa-volume-up {
+            opacity: 1;
+            -webkit-transform: translate3d(0px, 0px, 0px);
+            transform: translate3d(0px, 0px, 0px); }
+          section#mixcloud-integrator ul li.playing div.podcast-icon i.fa-play {
+            opacity: 0 !important; }
+      section#mixcloud-integrator ul li div.podcast-icon {
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+        height: 0;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        border-radius: 2px;
+        -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+        margin: 10px 0px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: 0.2s ease-out;
+        transition: 0.2s ease-out;
+        overflow: hidden; }
+        section#mixcloud-integrator ul li div.podcast-icon i.fa-volume-up {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          font-size: 2em;
+          color: white;
+          opacity: 0;
+          -webkit-transition: 0.1s ease-out;
+          transition: 0.1s ease-out;
+          -webkit-transform: translate3d(0px, 45px, 0px);
+          transform: translate3d(0px, 45px, 0px); }
+          section#mixcloud-integrator ul li div.podcast-icon i.fa-volume-up:before {
+            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
+        section#mixcloud-integrator ul li div.podcast-icon i.fa-play {
+          opacity: 0;
+          font-size: 3em;
+          color: white;
+          -webkit-transition: 0.2s ease-out;
+          transition: 0.2s ease-out;
+          position: absolute;
+          bottom: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center; }
+          section#mixcloud-integrator ul li div.podcast-icon i.fa-play:before {
+            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
+      section#mixcloud-integrator ul li h3 {
+        line-height: 1.1em; }
+      section#mixcloud-integrator ul li p {
+        font-size: 0.8em; }
+        section#mixcloud-integrator ul li p i {
+          margin-right: 5px; }
+        section#mixcloud-integrator ul li p:first-of-type {
+          text-align: right; }
+  @media screen and (min-width: 600px) {
+    section#mixcloud-integrator ul li {
+      width: calc(33.33% - 20px); }
+      section#mixcloud-integrator ul li:nth-of-type(2n) {
+        margin-right: 30px; }
+      section#mixcloud-integrator ul li:nth-of-type(3n) {
+        margin-right: 0px; } }
+  @media screen and (min-width: 800px) {
+    section#mixcloud-integrator ul li {
+      width: calc(25% - 22.5px); }
+      section#mixcloud-integrator ul li:nth-of-type(2n) {
+        margin-right: 30px; }
+      section#mixcloud-integrator ul li:nth-of-type(3n) {
+        margin-right: 30px; }
+      section#mixcloud-integrator ul li:nth-of-type(4n) {
+        margin-right: 0px; }
+      section#mixcloud-integrator ul li h3 {
+        font-size: 1.4em; } }
+  @media screen and (min-width: 1000px) {
+    section#mixcloud-integrator ul li {
+      width: calc(20% - 24px); }
+      section#mixcloud-integrator ul li:nth-of-type(2n) {
+        margin-right: 30px; }
+      section#mixcloud-integrator ul li:nth-of-type(3n) {
+        margin-right: 30px; }
+      section#mixcloud-integrator ul li:nth-of-type(4n) {
+        margin-right: 30px; }
+      section#mixcloud-integrator ul li:nth-of-type(5n) {
+        margin-right: 0px; } }
+  @media screen and (min-width: 1400px) {
+    section#mixcloud-integrator ul li {
+      width: calc(16.666% - 25px); }
+      section#mixcloud-integrator ul li:nth-of-type(2n) {
+        margin-right: 30px; }
+      section#mixcloud-integrator ul li:nth-of-type(3n) {
+        margin-right: 30px; }
+      section#mixcloud-integrator ul li:nth-of-type(4n) {
+        margin-right: 30px; }
+      section#mixcloud-integrator ul li:nth-of-type(5n) {
+        margin-right: 30px; }
+      section#mixcloud-integrator ul li:nth-of-type(6n) {
+        margin-right: 0px; } }
+
+@media screen and (min-width: 800px) {
+  section#mixcloud-integrator {
+    margin: 30px 0px; } }

@@ -1,0 +1,29 @@
+li.ng-enter
+  opacity: 0
+  transition: 0.2s ease-out
+
+li.ng-enter-stagger
+  transition-delay: 0.05s
+  transition-duration: 0s
+
+li.ng-enter-active
+  opacity: 1
+
+
+@keyframes enterPlayer
+  0%
+    transform: translate3d(0px,20px,0px)
+    opacity: 0
+  20%
+    transform: translate3d(0px,20px,0px)
+    opacity: 0
+  to
+    transform: translate3d(0px,0px,0px)
+    opacity: 1
+
+#mixcloud-player.ng-hide-remove
+  animation: 0.2s enterPlayer ease-out
+
+#mixcloud-player.ng-hide-add
+  animation: 0.2s enterPlayer ease-out
+  animation-direction: reverse
