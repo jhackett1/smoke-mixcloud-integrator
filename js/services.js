@@ -33,7 +33,7 @@ services.service('apiProcessor', function(){
       podcast.created_time = upload.created_time;
       podcast.duration = parseInt(upload.audio_length / 60);
       podcast.icon = upload.pictures.large;
-      podcast.embed = "http://api.mixcloud.com" + upload.key + "embed-json/?color=282951";
+      podcast.embed = "https://api.mixcloud.com" + upload.key + "embed-json/?color=282951";
       return podcast;
     })
     return processedList;
