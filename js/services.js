@@ -2,8 +2,8 @@ var services = angular.module('mixcloudServices',[]);
 
 // Service to interact with Mixcloud API and return the data
 services.service('mixcloudApi', function($http, $q){
-  // Two constants for the relevant API endpoints
-  const feedEndpoint = "https://api.mixcloud.com/smokeradio/cloudcasts/";
+  // Set constant for the relevant API endpoints from passed php variable
+  const feedEndpoint = phpVars.apiURL + "/";
   // LIST 20 RECENT PODCASTS, PAGE AS REQUESTED
   this.list = function(page){
     // Calculate the offset for the desired page
